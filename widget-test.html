@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Widget Test Page</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 0 24px;
+      color: #111;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    code {
+      background: #f3f4f6;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Chatbot Widget Test Page</h1>
+  <p>This simulates a third-party website with the chatbot widget embedded.</p>
+  <p>Look for the chat bubble in the <strong>bottom-right corner</strong>.</p>
+  <p>
+    To change the API key, edit <code>widget-test.html</code> and replace
+    <code>YOUR_PUBLIC_KEY_HERE</code> with your key from the dashboard.
+  </p>
+
+  <script src="./apps/widget/dist/widget.js"></script>
+  <script>
+    ChatbotWidget.init({
+      apiKey: 'pub_1026b9cd69111aaf7f6ffdca8ea21109d73b54278992e20e',
+      backendUrl: 'http://localhost:3001',
+    })
+  </script>
+</body>
+
+</html>

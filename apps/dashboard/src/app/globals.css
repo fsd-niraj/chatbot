@@ -1,0 +1,22 @@
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: var(--mantine-color-default-border);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--mantine-color-dimmed);
+}
+
+html,
+body {
+  height: 100%;
+}

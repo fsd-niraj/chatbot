@@ -1,0 +1,30 @@
+{
+  "name": "chatbot-platform",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Full-stack embeddable Cobot",
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "scripts": {
+    "dev:backend": "pnpm --filter backend dev",
+    "dev:dashboard": "pnpm --filter dashboard dev",
+    "dev:widget": "pnpm --filter widget dev",
+    "build:shared": "pnpm --filter shared build",
+    "build": "pnpm run build:shared && pnpm --filter './apps/*' build",
+    "type-check": "pnpm -r type-check",
+    "format": "prettier --write \"**/*.{ts,tsx,js,json,md}\""
+  },
+  "pnpm": {
+    "overrides": {
+      "@types/react": "^19.0.0",
+      "@types/react-dom": "^19.0.0"
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "prettier": "^3.3.0",
+    "typescript": "^5.5.0"
+  }
+}
